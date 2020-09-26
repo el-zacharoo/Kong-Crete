@@ -9,15 +9,17 @@ import { BlockPropTypes, Markdown } from '../shared';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        paddingTop: theme.spacing(7),
-        paddingBottom: theme.spacing(7),
+        paddingTop: theme.spacing(15),
+        paddingBottom: theme.spacing(15),
+        background: theme.palette.background.features,
+        margin: '0 calc(50% - 50vw)',
     },
-    copy: {
-        marginTop: theme.spacing(0.5),
-        '&>* img': {
-            maxWidth: '100%',
-        },
-    },
+    // copy: {
+    //     marginTop: theme.spacing(0.5),
+    //     '&>* img': {
+    //         maxWidth: '100%',
+    //     },
+    // },
 }));
 
 export const Centred = ({ content }) => {
@@ -26,9 +28,12 @@ export const Centred = ({ content }) => {
     return (
         <Box className={classes.root}>
             <Typography align="center" variant="h2">{content.fields.title}</Typography>
-            <ReactMarkdown className={classes.copy} renderers={Markdown.renderers}>
+            <Typography align="center" variant="h4">
                 {content.fields.copy}
-            </ReactMarkdown>
+            </Typography>
+            <Typography align="center" variant="h5">
+                {content.fields.description}
+            </Typography>
         </Box>
     );
 }

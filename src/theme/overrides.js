@@ -1,10 +1,10 @@
-import { ttNorms, ttNormsBold, ttNormsItalic, ttNormsBoldItalic } from './typography';
 import { color } from './palette';
+import { Roboto, RobotoReg, Robot0Bold, RobotoItalics, RobotoBoldItalics } from './typography';
 
 export default {
     MuiCssBaseline: {
         '@global': {
-            '@font-face': [ttNorms, ttNormsBold, ttNormsItalic, ttNormsBoldItalic],
+            '@font-face': [Roboto, RobotoReg, Robot0Bold, RobotoItalics, RobotoBoldItalics],
         }
     },
     MuiAppBar: {
@@ -37,6 +37,8 @@ export default {
         },
         contained: {
             boxShadow: 'none',
+            paddingLeft: '2rem',
+            paddingRight: '2rem'
         },
     },
     MuiTypography: {
@@ -44,4 +46,10 @@ export default {
             marginBottom: '1rem',
         },
     },
+    MuiOutlinedInput: {
+        root: {
+            background: color.fog,
+            color
+        }
+    }
 }

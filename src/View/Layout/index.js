@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
+
 const useStyles = makeStyles(theme => ({
     root: {
         minHeight: 'calc(100vh - 330px)'
@@ -19,6 +20,7 @@ export const Layout = withRouter(props => {
             <Header title={pathname} />
             <main className={classes.root}>
                 {props.children}
+
             </main>
             <Footer />
         </>

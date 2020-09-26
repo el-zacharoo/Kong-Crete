@@ -4,8 +4,8 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import { useTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import * as PropTypes from 'prop-types';
-
 import { Block } from '../blocks/Block';
+import { ContactUs } from '../blocks/ContactUs';
 
 // page-level theme
 const makeTheme = (theme, style) => createMuiTheme({
@@ -37,11 +37,12 @@ export const ContentRenderer = ({ content }) => {
                     {/* page or section layout */}
                     {content.fields.blocks.map((block, index) =>
                         <Box key={index} id={block.fields.slug} style={background(block)}>
-                            <Container maxWidth="md">
+                            <Container maxWidth="lg">
                                 <Block content={block} />
                             </Container>
                         </Box>
                     )}
+                    <ContactUs />
                 </>
                 :
                 // individual component
