@@ -16,6 +16,8 @@
     "clsx": "^1.1.0",
     "contentful": "^7.14.4",
     "css-mediaquery": "^0.1.2",
+    "install": "^0.13.0",
+    "netlify-cli": "^2.65.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
@@ -54,11 +56,13 @@
             "external",
             "internal"
           ],
-          "pathGroups": [{
-            "pattern": "react",
-            "group": "external",
-            "position": "before"
-          }],
+          "pathGroups": [
+            {
+              "pattern": "react",
+              "group": "external",
+              "position": "before"
+            }
+          ],
           "pathGroupsExcludedImportTypes": [
             "react"
           ],

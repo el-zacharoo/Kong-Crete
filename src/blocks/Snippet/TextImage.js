@@ -14,19 +14,14 @@ const useStyles = makeStyles(theme => ({
     root: {
         // paddingTop: theme.spacing(7),
         // paddingBottom: theme.spacing(7),
-        // background: theme.palette.primary.main
+        background: theme.palette.background.default,
+        margin: '0 calc(50% - 50vw)',
     },
     title: {
         marginTop: theme.spacing(2)
     },
     underline: {
         marginTop: theme.spacing(0.25),
-    },
-    copy: {
-        marginTop: theme.spacing(0.5),
-        '&>* img': {
-            maxWidth: '100%',
-        },
     },
     teaser: {
         marginTop: theme.spacing(6),
@@ -45,9 +40,7 @@ export const TextImage = ({ content }) => {
     const classes = useStyles();
 
     return (
-        <Grid direction="row-reverse" container spacing={2} justify="space-between" className={classes.root}
-        >
-
+        <Grid container className={classes.root} spacing={4}>
             <Grid item xs={12} sm={6} md={6}>
                 <Typography className={classes.title} variant="h2">{content.fields.title}</Typography>
                 <Typography className={classes.copy} renderers={Markdown.renderers}>
@@ -69,7 +62,8 @@ export const TextImage = ({ content }) => {
             {content.fields.image &&
                 <Hidden xsDown>
                     <Grid item xs={12} sm={6} md={6} container
-                        justify={content.fields.layout === "Right" ? "flex-start" : "flex-end"}>
+                    // justify={content.fields.layout === "Right" ? "flex-start" : "flex-end"}
+                    >
                         <img className={classes.image}
                             src={content.fields.image.fields.file.url}
                             title=""
