@@ -20,8 +20,8 @@ const prodCfg = {
     contentful: {
         environment: 'master',
         // set these environment vars on Netlify
-        deliveryToken: process.env.REACT_APP_CF_DELIVERY_TOKEN,
-        previewToken: process.env.REACT_APP_CF_PREVIEW_TOKEN,
+        deliveryToken: 'tvwI9ygMl4zbt9oCJ2l31d9CighK1j9dMC2axfpQxaI',
+        previewToken: 'CQZsn5s_F-ztfbuFo_yINVA5puwkdpY7uvdNJX8x460',
     },
     ga: {
         code: 'UA-000000000-1'
