@@ -1,8 +1,10 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+
 import { makeStyles } from '@material-ui/core/styles';
-import { Header } from './Header';
+import { withRouter } from 'react-router-dom';
+
 import { Footer } from './Footer';
+import { Header } from './Header';
 
 
 const useStyles = makeStyles(theme => ({
