@@ -39,13 +39,13 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-const reqInit = {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-        'Content-Type': 'multipart/form-data'
-    },
-};
+// const reqInit = {
+//     method: 'POST',
+//     mode: 'no-cors',
+//     headers: {
+//         'Content-Type': 'multipart/form-data'
+//     },
+// };
 
 const emailCheck = /\S+@\S+/
 
