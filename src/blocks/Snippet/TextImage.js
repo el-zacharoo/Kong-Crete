@@ -40,7 +40,7 @@ export const TextImage = ({ content }) => {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.root} spacing={4}>
+        <Grid container className={classes.root} spacing={2}>
             <Grid item xs={12} sm={6} md={6}>
                 <Typography className={classes.title} variant="h2">{content.fields.title}</Typography>
                 <Typography className={classes.copy} renderers={Markdown.renderers}>
