@@ -1,18 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+
 import Box from '@material-ui/core/Box'
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Hidden from '@material-ui/core/Hidden';
+// import Container from '@material-ui/core/Container';
+// import Grid from '@material-ui/core/Grid';
+// import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
-import ReactMarkdown from 'react-markdown';
+// import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
+// import ReactMarkdown from 'react-markdown';
 import { Link as RouterLink } from 'react-router-dom';
+
+import { useStore } from '../../api';
 import ActionLink from '../../components/ActionLink';
 import { HomeIcon } from '../../icons/HomeIcon';
-import { useStore } from '../../api';
-import config from '../../config';
+// import config from '../../config';
 
 const useStyles = makeStyles(theme => ({
     footer: {
