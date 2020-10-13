@@ -17,7 +17,7 @@ export default {
         main: color.black,
     },
     secondary: {
-        main: color.orange,
+        main: color.blue,
     },
     text: {
         primary: color.black,
