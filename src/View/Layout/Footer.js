@@ -46,7 +46,7 @@ export const Footer = () => {
                 </Link>
             </Box>
             <Box display="flex" justifyContent="center" >
-                <Typography variant="h4">0800 KONGCRETE</Typography>
+                <Typography variant="h4">Weston Development</Typography>
             </Box>
             <Box display="flex" justifyContent="center">
                 {footer && footer[0].fields.resources.map(res =>

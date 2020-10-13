@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
-import clsx from 'clsx';
-import { Link as RouterLink, useLocation } from 'react-router-dom';
+
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Hidden from '@material-ui/core/Hidden';
+import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import MenuIcon from '@material-ui/icons/Menu';
-import Link from '@material-ui/core/Link';
-import { HomeIcon } from '../../icons/HomeIcon';
+import clsx from 'clsx';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
+
 import { useStore } from '../../api';
+import { HomeIcon } from '../../icons/HomeIcon';
 
 const useStyles = makeStyles(theme => ({
     spacer: {
@@ -28,6 +30,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     button: {
+        color: theme.palette.primary.main,
         margin: theme.spacing(1),
         borderBottomWidth: 2,
         borderBottomStyle: 'solid',
@@ -55,7 +58,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     detailMenu: {
-        background: theme.palette.background.default,
+        background: theme.palette.background.paper,
     },
     offset: theme.mixins.toolbar,
 }));
@@ -96,6 +99,7 @@ export const Header = (props) => {
                                 className={clsx(classes.button, (selected === item.fields.slug ? classes.selected : ""))}
                                 aria-label={item.fields.title}
                                 data-testid="menu-md"
+                                color="primary"
                             >
                                 {item.fields.title}
                             </Button>
