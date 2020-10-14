@@ -31,8 +31,8 @@ export default {
         },
         contained: {
             boxShadow: 'none',
-            borderRadius: '0.3rem',
-            lineHeight: '2.25rem',
+            borderRadius: '0.25rem',
+            lineHeight: '2rem',
             fontSize: '1.125rem',
             paddingLeft: '2.25rem',
             paddingRight: '2.25rem',

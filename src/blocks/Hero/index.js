@@ -40,7 +40,7 @@ export const Hero = ({ content }) => {
                     <Grid item sm={12} md={6}>
                         <Box className={classes.typography}>
                             <Typography color="secondary" variant="subtitle1" data-testid="headline">{content.fields.subHeading}</Typography>
-                            <Typography color="secondary" variant="h1" data-testid="headline">{content.fields.headline}</Typography>
+                            <Typography color="primary" variant="h1" data-testid="headline">{content.fields.headline}</Typography>
                             <Box display="flex" justifyContent="center">
                                 <Typography className={classes.subText} variant="subtitle1" color="textSecondary" data-testid="copy">{content.fields.copy}</Typography>
                             </Box>

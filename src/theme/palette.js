@@ -2,31 +2,31 @@
 // https://material.io/resources/color/
 export const color = {
     white: '#FFFFFF',
-    black: '#333333',
+    black: '#000000',
     darkGrey: '#454545',
-    lightGrey: '#f8fafd',
+    ghost: '#f8fafd',
     fog: '#FBFBFB',
     smoke: '#f6f6f6',
-    orange: '#ED8001',
-    blue: '#29669F',
+    orange: '#FF633C',
+    blue: '#0E1D53',
     darkText: '#858585'
 };
 
 export default {
     primary: {
-        main: color.black,
+        main: color.blue,
     },
     secondary: {
-        main: color.blue,
+        main: color.orange,
     },
     text: {
         primary: color.black,
-        secondary: color.darkText,
+        secondary: color.darkGrey,
         contrastText: color.white,
     },
     background: {
         default: color.white,
-        paper: color.lightGrey,
+        paper: color.ghost,
         // features: color.smoke,
         // social: color.blue,
         // input: color.fog

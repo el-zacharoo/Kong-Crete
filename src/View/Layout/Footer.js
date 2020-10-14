@@ -9,24 +9,27 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import RemoveOutlinedIcon from '@material-ui/icons/RemoveOutlined';
 // import ReactMarkdown from 'react-markdown';
+import clsx from 'clsx';
+// eslint-disable-next-line no-unused-vars
 import { Link as RouterLink } from 'react-router-dom';
 
 import { useStore } from '../../api';
 import ActionLink from '../../components/ActionLink';
-import { HomeIcon } from '../../icons/HomeIcon';
 // import config from '../../config';
 
 const useStyles = makeStyles(theme => ({
     footer: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        background: theme.palette.secondary.main,
+        background: theme.palette.primary.main,
     },
     links: {
-        padding: theme.spacing(1.5)
+        // padding: theme.spacing(1.5),
+        color: theme.palette.text.contrastText,
     },
     logo: {
         // flexGrow: 1,
+        color: theme.palette.text.contrastText,
         display: 'flex',
         '& svg': {
             fontSize: '6rem',
@@ -34,31 +37,36 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const Footer = () => {
+export const Footer = (props) => {
     const classes = useStyles();
     const { contentStore } = useStore();
     const { footer } = contentStore.useFooter();
 
     return (
-        <footer className={classes.footer}>
-            <Box display="flex" justifyItems="center">
-                <Link component={RouterLink} to="/" className={classes.logo} aria-label="Home">
-                    <HomeIcon alt="" />
-                </Link>
-            </Box>
-            <Box display="flex" justifyContent="center" >
-                <Typography variant="h4">Weston Development</Typography>
-            </Box>
-            <Box display="flex" justifyContent="center">
+        <footer className={clsx(props.className, classes.footer)}>
+            <Box disply='flex' flexDirection='cloumn' style={{ padding: '4rem' }} >
+                <Typography className={classes.links} variant='h3' style={{ paddingBottom: '2rem' }}>Zachary Weston</Typography>
                 {footer && footer[0].fields.resources.map(res =>
-                    <Typography className={classes.links} gutterBottom style={{ paddingBottom: '0.8rem' }}>
-                        <Link component={ActionLink} to={res.fields.action}>
+                    <Typography gutterBottom style={{ paddingBottom: '0.8rem' }}>
+                        <Link className={classes.links} component={ActionLink} to={res.fields.action}>
                             {res.fields.value}
                         </Link>
                     </Typography>
-                )
-                }
+                )}
+                <Box display='flex' justifyContent='space-between' style={{ paddingTop: '2rem' }} alignItems='flex-end'>
+                    <Typography className={classes.links}>
+                        <Link className={classes.links} component={ActionLink} to={`/document/terms-of-service`}>
+                            Terms of Service
+                        </Link> &nbsp;| &nbsp;
+                        <Link className={classes.links} component={ActionLink} to={`/document/privacy-policy`}>
+                            Privacy Policy
+                        </Link>
+                    </Typography>
+                    <Typography className={classes.links}>© 2020 Zachary Weston.</Typography>
+                </Box>
             </Box>
         </footer>
     );
 }
+
+
