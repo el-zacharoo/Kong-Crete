@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
     footer: {
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
+        background: theme.palette.secondary.main,
     },
     links: {
         padding: theme.spacing(1.5)

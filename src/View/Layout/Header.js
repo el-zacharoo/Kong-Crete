@@ -104,6 +104,14 @@ export const Header = (props) => {
                                 {item.fields.title}
                             </Button>
                         )}
+                        <Button
+                            // component={RouterLink}
+                            data-testid="menu-md"
+                            color="primary"
+                            variant="contained"
+                        >
+                            Contact
+                        </Button>
                     </></Hidden>
                     {/* xs popup menu */}
                     <Hidden mdUp>

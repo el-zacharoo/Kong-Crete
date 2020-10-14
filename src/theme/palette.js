@@ -2,9 +2,9 @@
 // https://material.io/resources/color/
 export const color = {
     white: '#FFFFFF',
-    black: '#000000',
+    black: '#333333',
     darkGrey: '#454545',
-    lightGrey: '#E5E5E5',
+    lightGrey: '#f8fafd',
     fog: '#FBFBFB',
     smoke: '#f6f6f6',
     orange: '#ED8001',
@@ -27,10 +27,10 @@ export default {
     background: {
         default: color.white,
         paper: color.lightGrey,
-        features: color.smoke,
-        social: color.blue,
-        input: color.fog
+        // features: color.smoke,
+        // social: color.blue,
+        // input: color.fog
     },
-    contrastThreshold: 2,
+    contrastThreshold: 3,
     tonalOffset: 0.2,
 }

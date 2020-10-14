@@ -7,49 +7,51 @@ export default {
             '@font-face': [Roboto, RobotoReg, Robot0Bold, RobotoItalics, RobotoBoldItalics],
         }
     },
-    MuiAppBar: {
-        colorDefault: {
+    MuiCard: {
+        root: {
             backgroundColor: color.white,
         }
-    },
-    MuiLink: {
-        root: {
-            fontWeight: 700,
-        },
     },
     MuiPaper: {
         root: {
             backgroundColor: color.white,
         },
         elevation1: {
-            boxShadow: `-8px 8px 6px -6px ${color.lightGrey}`
+            boxShadow: `0px 3px 20px ${'rgba(106, 137, 193, 0.2)'}`
+        },
+        elevation2: {
+            boxShadow: `0px 30px 200px ${'rgba(106, 137, 193, 0.2)'}`
         },
     },
-    MuiCardActionArea: {
-        root: {
-            height: '100%'
-        },
-    },
+
     MuiButton: {
         root: {
-            fontSize: '1rem',
-            fontWeight: 700,
+            fontSize: '1.125rem',
+            lineHeight: '1.3125rem',
         },
         contained: {
             boxShadow: 'none',
-            paddingLeft: '2rem',
-            paddingRight: '2rem'
+            borderRadius: '0.3rem',
+            lineHeight: '2.25rem',
+            fontSize: '1.125rem',
+            paddingLeft: '2.25rem',
+            paddingRight: '2.25rem',
         },
     },
-    MuiTypography: {
-        gutterBottom: {
-            marginBottom: '1rem',
-        },
-    },
+
     MuiOutlinedInput: {
         root: {
-            background: color.fog,
-            color
+            borderRadius: '0.25rem',
+            background: color.white,
+            color: color.grey,
         }
-    }
+    },
+    MuiInputLabel: {
+        root: {
+            color: color.grey,
+            fontSize: '0.9rem',
+
+        }
+    },
+
 }
