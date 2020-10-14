@@ -58,7 +58,7 @@ export default {
         lineHeight: 1.2,
         fontFamily: 'Roboto',
     },
-    // Snippet, Section, CardGrid title
+    // Snippet, Section, LayoutGrid title
     h2: {
         fontWeight: 500,
         fontSize: '3rem',
@@ -88,11 +88,12 @@ export default {
         fontSize: '1.125rem',
         lineHeight: 1.5,
         fontFamily: 'Roboto',
+        paddingTop: '1rem'
     },
     // Header brand text
     h6: {
         fontWeight: 400,
-        fontSize: '0.9rem',
+        fontSize: '1.08rem',
         lineHeight: 1.3,
         fontFamily: 'Roboto',
     },
@@ -106,7 +107,7 @@ export default {
     },
     // Article author
     subtitle2: {
-        fontWeight: 700,
+        fontWeight: 400,
         fontSize: '1rem',
         lineHeight: 1.5,
         fontFamily: 'Roboto',
