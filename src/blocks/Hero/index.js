@@ -45,7 +45,7 @@ export const Hero = ({ content }) => {
                                 <Typography className={classes.subText} variant="subtitle1" color="textSecondary" data-testid="copy">{content.fields.copy}</Typography>
                             </Box>
                             {content.fields.ctaLabel &&
-                                <Box justifyContent="center" paddingBottom="4rem" display="flex" >
+                                <Box paddingTop="4rem" display="flex" >
                                     <Button to={content.fields.ctaAction} variant="contained" color="primary">{content.fields.ctaLabel}</Button>
                                 </Box>
                             }

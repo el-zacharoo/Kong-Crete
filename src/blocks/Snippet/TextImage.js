@@ -5,23 +5,29 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-
+import RemoveIcon from '@material-ui/icons/Remove';
+import ReactMarkdown from 'react-markdown';
 
 import ActionLink from '../../components/ActionLink';
 import { BlockPropTypes, Markdown } from '../shared';
 
 const useStyles = makeStyles(theme => ({
     root: {
-        // paddingTop: theme.spacing(7),
-        // paddingBottom: theme.spacing(7),
-        background: theme.palette.background.default,
-        margin: '0 calc(50% - 50vw)',
+        paddingTop: theme.spacing(7),
+        paddingBottom: theme.spacing(7),
     },
     title: {
         marginTop: theme.spacing(2)
     },
     underline: {
         marginTop: theme.spacing(0.25),
+        marginLeft: theme.spacing(-0.75),
+    },
+    copy: {
+        marginTop: theme.spacing(0.5),
+        '&>* img': {
+            maxWidth: '100%',
+        },
     },
     teaser: {
         marginTop: theme.spacing(6),
@@ -40,12 +46,15 @@ export const TextImage = ({ content }) => {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.root} spacing={2}>
+        <Grid container spacing={3} justify="space-between" className={classes.root}
+            direction={content.fields.layout === "Right" ? "row-reverse" : "row"}>
+
             <Grid item xs={12} sm={6} md={6}>
                 <Typography className={classes.title} variant="h2">{content.fields.title}</Typography>
-                <Typography className={classes.copy} renderers={Markdown.renderers}>
+                <RemoveIcon className={classes.underline} fontSize="large" />
+                <ReactMarkdown className={classes.copy} renderers={Markdown.renderers}>
                     {content.fields.copy}
-                </Typography>
+                </ReactMarkdown>
                 {/* call to action */}
                 {content.fields.actionTeaser &&
                     <Typography className={classes.teaser} variant="h3" component="p">{content.fields.actionTeaser}</Typography>
@@ -62,8 +71,7 @@ export const TextImage = ({ content }) => {
             {content.fields.image &&
                 <Hidden xsDown>
                     <Grid item xs={12} sm={6} md={6} container
-                    // justify={content.fields.layout === "Right" ? "flex-start" : "flex-end"}
-                    >
+                        justify={content.fields.layout === "Right" ? "flex-start" : "flex-end"}>
                         <img className={classes.image}
                             src={content.fields.image.fields.file.url}
                             title=""
