@@ -19,17 +19,17 @@ export const StoreProvider = ({ children }) => {
     );
 };
 
-const useMenu = () => {
+export const useMenu = () => {
     const [menu, setMenu] = useState({ error: null });
 
     useEffect(() => {
         const fetch = async () => {
             try {
                 const resp = await pubApi.getEntries({ content_type: 'assembly', 'fields.slug': 'site-root', include: 1 }); //locale,
-                setMenu({ menu: resp.items[0].fields.blocks, error: null });
+                setMenu({ menuItems: resp.items[0].fields.blocks, error: null });
             } catch (e) {
                 console.error(e);
-                setMenu({ menu: null, error: { status: 500, msg: 'An issue occurred while menu items.' } });
+                setMenu({ menuItems: null, error: { status: 500, msg: 'An issue occurred while menu items.' } });
             }
         };
 

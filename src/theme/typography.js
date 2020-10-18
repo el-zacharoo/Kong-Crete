@@ -9,7 +9,7 @@ export const Roboto = {
     fontStyle: 'normal',
     fontDisplay: 'swap',
     fontWeight: 500,
-    src: `local('Roboto'), local('Roboto-Medium'), url(${RobotoMedium}) format('woff2')`,
+    src: `local('Roboto'), local('Roboto-Medium'), url(${RobotoMedium}) format('ttf')`,
 };
 
 export const RobotoReg = {
@@ -17,7 +17,7 @@ export const RobotoReg = {
     fontStyle: 'normal',
     fontDisplay: 'swap',
     fontWeight: 400,
-    src: `local('Roboto'), local('Roboto-Regular'), url(${RobotoRegular}) format('woff2')`,
+    src: `local('Roboto'), local('Roboto-Regular'), url(${RobotoRegular}) format('ttf')`,
 };
 
 export const Robot0Bold = {
@@ -25,7 +25,7 @@ export const Robot0Bold = {
     fontStyle: 'normal',
     fontDisplay: 'swap',
     fontWeight: 700,
-    src: `local('Roboto'), local('Roboto-Bold'), url(${RobotoBold}) format('woff2')`,
+    src: `local('Roboto'), local('Roboto-Bold'), url(${RobotoBold}) format('ttf')`,
 };
 
 export const RobotoItalics = {
@@ -33,7 +33,7 @@ export const RobotoItalics = {
     fontStyle: 'italic',
     fontDisplay: 'swap',
     fontWeight: 400,
-    src: `local('Roboto'), local('Roboto-Italic'), url(${RobotoItalic}) format('woff2')`,
+    src: `local('Roboto'), local('Roboto-Italic'), url(${RobotoItalic}) format('ttf')`,
 };
 
 export const RobotoBoldItalics = {
@@ -41,7 +41,7 @@ export const RobotoBoldItalics = {
     fontStyle: 'italic',
     fontDisplay: 'swap',
     fontWeight: 700,
-    src: `local('Roboto'), local('Roboto-BoldItalic'), url(${RobotoBoldItalic}) format('woff2')`,
+    src: `local('Roboto'), local('Roboto-BoldItalic'), url(${RobotoBoldItalic}) format('ttf')`,
 };
 
 export default {

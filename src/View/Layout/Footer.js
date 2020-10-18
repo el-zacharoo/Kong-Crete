@@ -19,20 +19,9 @@ import ActionLink from '../../components/ActionLink';
 
 const useStyles = makeStyles(theme => ({
     footer: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-        background: theme.palette.primary.main,
-    },
-    links: {
-        // padding: theme.spacing(1.5),
-        color: theme.palette.text.contrastText,
-    },
-    logo: {
-        // flexGrow: 1,
-        color: theme.palette.text.contrastText,
-        display: 'flex',
-        '& svg': {
-            fontSize: '6rem',
+        backgroundColor: theme.palette.primary.main,
+        '& *': {
+            color: theme.palette.text.contrastText,
         },
     },
 }));
@@ -45,24 +34,24 @@ export const Footer = (props) => {
     return (
         <footer className={clsx(props.className, classes.footer)}>
             <Box disply='flex' flexDirection='cloumn' style={{ padding: '4rem' }} >
-                <Typography className={classes.links} variant='h3' style={{ paddingBottom: '2rem' }}>Zachary Weston</Typography>
+                <Typography variant='h3' style={{ paddingBottom: '2rem' }}>Zachary Weston</Typography>
                 {footer && footer[0].fields.resources.map(res =>
                     <Typography gutterBottom style={{ paddingBottom: '0.8rem' }}>
-                        <Link className={classes.links} component={ActionLink} to={res.fields.action}>
+                        <Link component={ActionLink} to={res.fields.action}>
                             {res.fields.value}
                         </Link>
                     </Typography>
                 )}
                 <Box display='flex' justifyContent='space-between' style={{ paddingTop: '2rem' }} alignItems='flex-end'>
-                    <Typography className={classes.links}>
-                        <Link className={classes.links} component={ActionLink} to={`/document/terms-of-service`}>
+                    <Typography >
+                        <Link component={ActionLink} to={`/document/terms-of-service`}>
                             Terms of Service
                         </Link> &nbsp;| &nbsp;
-                        <Link className={classes.links} component={ActionLink} to={`/document/privacy-policy`}>
+                        <Link component={ActionLink} to={`/document/privacy-policy`}>
                             Privacy Policy
                         </Link>
                     </Typography>
-                    <Typography className={classes.links}>© 2020 Zachary Weston.</Typography>
+                    <Typography >© 2020 Zachary Weston.</Typography>
                 </Box>
             </Box>
         </footer>

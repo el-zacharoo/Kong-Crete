@@ -40,14 +40,14 @@ export const Hero = ({ content }) => {
                     <Grid item sm={12} md={6}>
                         <Box className={classes.typography}>
                             <Typography color="secondary" variant="subtitle1" data-testid="headline">{content.fields.subHeading}</Typography>
-                            <Typography color="primary" variant="h1" data-testid="headline">{content.fields.headline}</Typography>
-                            <Box display="flex" justifyContent="center">
-                                <Typography className={classes.subText} variant="subtitle1" color="textSecondary" data-testid="copy">{content.fields.copy}</Typography>
+                            <Box paddingTop="2rem" paddingBottom="4rem">
+                                <Typography color="primary" variant="h1" data-testid="headline">{content.fields.headline}</Typography>
                             </Box>
+                            <Typography className={classes.subText} variant="subtitle1" color="textSecondary" data-testid="copy">{content.fields.copy}</Typography>
                             {content.fields.ctaLabel &&
-                                <Box paddingTop="4rem" display="flex" >
-                                    <Button to={content.fields.ctaAction} variant="contained" color="primary">{content.fields.ctaLabel}</Button>
-                                </Box>
+
+                                <Button to={content.fields.ctaAction} variant="contained" color="primary">{content.fields.ctaLabel}</Button>
+
                             }
                         </Box>
                     </Grid>
