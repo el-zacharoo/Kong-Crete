@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         paddingTop: theme.spacing(15),
         paddingBottom: theme.spacing(15),
-        background: theme.palette.background.features,
+        background: theme.palette.background.paper,
         margin: '0 calc(50% - 50vw)',
     },
 }));

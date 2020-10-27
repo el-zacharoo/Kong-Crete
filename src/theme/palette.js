@@ -7,10 +7,9 @@ export const color = {
     ghost: '#f8fafd',
     fog: '#FBFBFB',
     smoke: '#f6f6f6',
-    lightBlue: '#4F5D75',
     blue: '#0E1D53',
     darkText: '#858585',
-    orange: '#0098ff'
+    lightBlue: '#0098ff'
 };
 
 export default {
@@ -18,7 +17,7 @@ export default {
         main: color.blue,
     },
     secondary: {
-        main: color.orange,
+        main: color.lightBlue,
     },
     text: {
         primary: color.black,
