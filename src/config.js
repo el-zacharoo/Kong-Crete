@@ -37,7 +37,7 @@ const config = process.env.REACT_APP_STAGE === 'production' ? prodCfg : devCfg;
 export default {
     // merge environment-specifc config
     ...config,
-    siteName: 'Kongcrete',
+    siteName: 'WestonDev',
     contentful: {
         spaceId: '1fq37comle56',
         ...config.contentful,
