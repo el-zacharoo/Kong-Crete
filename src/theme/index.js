@@ -1,7 +1,7 @@
-import palette from './palette';
-import typography from './typography';
 import overrides from './overrides';
+import palette from './palette';
 import props from './props';
+import typography from './typography';
 
 export default {
     palette,

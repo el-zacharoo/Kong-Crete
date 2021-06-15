@@ -7,17 +7,15 @@ export const color = {
     ghost: '#f8fafd',
     fog: '#FBFBFB',
     smoke: '#f6f6f6',
-    blue: '#0E1D53',
     darkText: '#858585',
-    lightBlue: '#0098ff'
 };
 
 export default {
     primary: {
-        main: color.blue,
+        main: color.black,
     },
     secondary: {
-        main: color.lightBlue,
+        main: color.darkGrey,
     },
     text: {
         primary: color.black,
@@ -27,9 +25,9 @@ export default {
     background: {
         default: color.white,
         paper: color.ghost,
-        // features: color.smoke,
-        // social: color.blue,
-        // input: color.fog
+        features: color.smoke,
+        social: color.blue,
+        input: color.fog
     },
     contrastThreshold: 3,
     tonalOffset: 0.2,
